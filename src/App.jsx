@@ -1,12 +1,28 @@
+import { Routes, Route } from "react-router-dom";
+
+import HomePage from "./pages/HomePage";
+import AboutUsPage from "./pages/AboutUsPage";
+import ServicesPage from "./pages/ServicesPage";
+import ServicesDetailPage from "./pages/ServicesDetailPage";
+import ContactUsPage from "./pages/ContactUsPage";
+import NotFoundPage from "./pages/NotFoundPage";
+
+import Layout from "./components/layout/Layout";
+
 import "./App.scss";
-import Header from "./components/Header";
 
 function App() {
   return (
-    <>
-      <p>Hello</p>
-      <Header />
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="about" element={<AboutUsPage />} />
+        <Route path="services" element={<ServicesPage />} />
+        <Route path="serviceDetail" element={<ServicesDetailPage />} />
+        <Route path="contact" element={<ContactUsPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   );
 }
 

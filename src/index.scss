@@ -1,15 +1,29 @@
 :root {
   --background-color: #0f1118;
+  --sidebar-background-color: #0d0f16;
   --primary-color: #fff;
   --secondary-color: #989cac;
   --third-color: #26272c;
   --accent-color: #ff455b;
+  --btn-color: #ff7245;
+
+  --font-size-back-word: 130px;
+  --font-size-word: 60px;
+  --title-font-size: 36px;
+  --second-title-font-size: 32px;
+  --modal-font-size: 20px;
+  --list-font-size: 18px;
+  --btn-font-size: 16px;
+  --btn_arrow_font-size: 14px;
+  --subtitle-font-size: 12px;
 }
 
 body {
+  height: 100vh;
   margin: 0;
+  // padding: 0;
   font-style: normal;
-  background-color: var(--secondary-color);
+  // background-color: var(--background-color);
 }
 
 a {
@@ -29,4 +43,36 @@ p {
 
 button {
   cursor: pointer;
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  list-style: none;
 }
