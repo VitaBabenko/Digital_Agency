@@ -1,0 +1,12 @@
+.btn {
+  padding: 12px 40px;
+  font-size: var(--btn-font-size);
+  font-weight: 600;
+  color: var(--primary-color);
+  background: linear-gradient(
+    90deg,
+    var(--accent-color) 0%,
+    var(--btn-color) 100%
+  );
+  border: none;
+}
