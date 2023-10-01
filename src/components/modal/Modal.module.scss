@@ -1,5 +1,5 @@
 .modal {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 111000;
@@ -20,6 +20,16 @@
   left: 10px;
   background-color: inherit;
   border: none;
+}
+
+.icon_close {
+  fill: var(--primary-color);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+    transition-timing-function: var(--transition_data);
+  }
 }
 
 .list {
@@ -47,6 +57,12 @@
   background-color: inherit;
   color: var(--primary-color);
   padding: 14px 15px 14px 30px;
+
+  &::placeholder {
+    font-size: var(--btn_arrow_font-size);
+    font-weight: 400;
+    opacity: 0.6;
+  }
 }
 
 .img_icon {

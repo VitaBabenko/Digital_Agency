@@ -1,17 +1,21 @@
 import PropTypes from "prop-types";
 
-import elements from "../../images/elements.svg";
-
 import styles from "./ServicesList.module.scss";
 
 const ServicesList = ({ icon, title, desc }) => {
   return (
-    <div className={styles.wrap}>
-      <img src={elements} alt="first elements" />
-      <img className={styles.img_icon} src={icon} alt="icon first" />
+    <>
+      <svg
+        aria-label="icons services"
+        width={125}
+        height={95}
+        className={styles.icon_wrap}
+      >
+        <use href={icon}></use>
+      </svg>
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.description}>{desc}</p>
-    </div>
+    </>
   );
 };
 
