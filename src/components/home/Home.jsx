@@ -1,15 +1,12 @@
 import Button from "../button/Button";
 import ServicesList from "../servicesList/ServicesList";
 
-import icon from "../../images/Polygon.svg";
-import icon1 from "../../images/icon1.svg";
-import icon2 from "../../images/icon2.svg";
-import icon3 from "../../images/icon3.svg";
-import arrow from "../../images/Arrow-right.svg";
-import arrowGrey from "../../images/Arrow-grey.svg";
-import img1_desktop from "../../images/picture1_desktop.png";
-import img2_desktop from "../../images/picture2_desktop.png";
-import img3_desktop from "../../images/picture3_desktop.png";
+import icons from "../../images/sprite.svg";
+
+import img1_mobile from "../../images/picture1_mobile.jpg";
+import img2_mobile from "../../images/picture2_mobile.jpg";
+import img3_mobile from "../../images/picture3_mobile.jpg";
+import img_touch from "../../images/image.jpg";
 import homeDesktop from "../../images/home_img_desktop.png";
 
 import styles from "./Home.module.scss";
@@ -23,7 +20,9 @@ const Home = () => {
         <p className={styles.word_home}>products</p>
         <p className={styles.word_big_home}>products</p>
         <div className={styles.wrap}>
-          <img src={icon} alt="polygon icon" />
+          <svg aria-label="icon polygon" width={18} height={16}>
+            <use href={icons + "#polygon"}></use>
+          </svg>
           <span className={styles.subtitle}>more than obvious</span>
         </div>
         <h1 className={styles.title}>Digital products for your brand</h1>
@@ -37,7 +36,9 @@ const Home = () => {
       <section className={styles.wrapper_section}>
         <div className={styles.content}>
           <div className={styles.wrap}>
-            <img src={icon} alt="polygon icon" />
+            <svg aria-label="icon polygon" width={18} height={16}>
+              <use href={icons + "#polygon"}></use>
+            </svg>
             <span className={styles.subtitle}>our services</span>
           </div>
           <h2 className={styles.second_title}>We Develop Digital Products</h2>
@@ -46,14 +47,21 @@ const Home = () => {
           </p>
           <button className={styles.btn} type="button">
             View all
-            <img src={arrow} alt="arrow right" />
+            <svg
+              aria-label="icon arrow"
+              className={styles.icon_arrow__white}
+              width={30}
+              height={20}
+            >
+              <use href={icons + "#arrow_right"}></use>
+            </svg>
           </button>
         </div>
         <div>
           <ul className={styles.list}>
             <li className={styles.list_item}>
               <ServicesList
-                icon={icon1}
+                icon={icons + "#services_1"}
                 title="Web Development"
                 desc="Our developers are carefully considering how your product should
               work while maintain..."
@@ -61,7 +69,7 @@ const Home = () => {
             </li>
             <li className={styles.list_item}>
               <ServicesList
-                icon={icon2}
+                icon={icons + "#services_2"}
                 title="SEO optimization"
                 desc="Promotion of your product is an important step in making money and
               constant popular..."
@@ -69,7 +77,7 @@ const Home = () => {
             </li>
             <li className={styles.list_item}>
               <ServicesList
-                icon={icon3}
+                icon={icons + "#services_3"}
                 title="Ui/UX Design"
                 desc="Everything starts with the beautiful. And professional design is
               of great importance..."
@@ -81,32 +89,73 @@ const Home = () => {
 
       <section className={styles.section}>
         <div className={styles.wrap}>
-          <img src={icon} alt="polygon icon" />
+          <svg aria-label="icon polygon" width={18} height={16}>
+            <use href={icons + "#polygon"}></use>
+          </svg>
           <span className={styles.subtitle}>portfolio</span>
         </div>
         <h3 className={styles.title_black}>check our latest cases</h3>
         <button className={styles.btn_arrow} type="button">
           View all
-          <img src={arrowGrey} alt="arrow right grey" />
+          <svg
+            aria-label="icon arrow"
+            width={30}
+            height={20}
+            className={styles.svg_arrow__black}
+          >
+            <use href={icons + "#arrow_right"}></use>
+          </svg>
         </button>
         <ul className={styles.img_list}>
           <li>
-            <img src={img1_desktop} alt="first picture" />
+            <img src={img1_mobile} alt="first picture" />
           </li>
           <li>
-            <img src={img2_desktop} alt="second picture" />
+            <img src={img2_mobile} alt="second picture" />
           </li>
           <li>
-            <img src={img3_desktop} alt="third picture" />
+            <img src={img3_mobile} alt="third picture" />
           </li>
         </ul>
         <p className={styles.word}>cases</p>
         <p className={styles.back_word}>cases</p>
       </section>
 
+      <section className={styles.section_wrapper}>
+        <h2 className={styles.third_title}>Always Be in touch</h2>
+        <p className={styles.desc_title}>
+          Subscribe if you want always to be known about all the news and
+          available propositions.
+        </p>
+        <div className={styles.wrapper_position}>
+          <input
+            type="text"
+            placeholder="Enter your email"
+            className={styles.input}
+          />
+          <button className={styles.btn_send}>
+            <svg
+              aria-label="icon send"
+              width={20}
+              height={20}
+              className={styles.icon_send}
+            >
+              <use href={icons + "#icon-send"}></use>
+            </svg>
+          </button>
+          <label className={styles.label}>
+            <input className={styles.checkbox} type="checkbox" /> I accept all{" "}
+            <span className={styles.span}>Terms and Conditions</span>
+          </label>
+          <img src={img_touch} alt="image in touch" />
+        </div>
+      </section>
+
       <section className={styles.wrap_section}>
         <div className={styles.wrap}>
-          <img src={icon} alt="polygon icon" />
+          <svg aria-label="icon polygon" width={18} height={16}>
+            <use href={icons + "#polygon"}></use>
+          </svg>
           <span className={styles.subtitle}>what we do</span>
         </div>
         <h2 className={styles.second_title}>We Develop Digital Products</h2>

@@ -1,17 +1,18 @@
-.wrap {
-  position: relative;
-}
+// .icon_wrap {
+//   position: relative;
+// }
 
-.img_icon {
-  position: absolute;
-  left: 18%;
-  top: 10%;
-}
+// .img_icon {
+//   position: absolute;
+//   left: 18%;
+//   top: 10%;
+// }
 
 .title {
   margin-top: 45px;
   margin-bottom: 19px;
   color: var(--primary-color);
+  font-family: "Raleway", sans-serif;
   font-size: var(--list-font-size);
   font-weight: 600;
   text-transform: capitalize;

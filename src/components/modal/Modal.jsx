@@ -2,8 +2,7 @@ import { NavLink } from "react-router-dom";
 
 import PropTypes from "prop-types";
 
-import iconClose from "../../images/closeIcon.svg";
-import search from "../../images/search.svg";
+import icons from "../../images/sprite.svg";
 
 import styles from "./Modal.module.scss";
 
@@ -16,16 +15,16 @@ const Modal = ({ setIsOpenModal }) => {
           className={styles.btn_close}
           onClick={() => setIsOpenModal(false)}
         >
-          <img src={iconClose} alt="icon close" />
+          <svg
+            aria-label="icon close"
+            width={40}
+            height={40}
+            className={styles.icon_close}
+          >
+            <use href={icons + "#icon-close"}></use>
+          </svg>
         </button>
         <nav className={styles.list}>
-          <NavLink
-            className={styles.item}
-            to="/"
-            onClick={() => setIsOpenModal(false)}
-          >
-            Home
-          </NavLink>
           <NavLink
             className={styles.item}
             to="/about"
@@ -57,7 +56,14 @@ const Modal = ({ setIsOpenModal }) => {
         </nav>
         <form>
           <input className={styles.input} type="text" placeholder="Search" />
-          <img className={styles.img_icon} src={search} alt="icon search" />
+          <svg
+            aria-label="icon search"
+            width={20}
+            height={20}
+            className={styles.img_icon}
+          >
+            <use href={icons + "#search"}></use>
+          </svg>
         </form>
       </div>
     </div>

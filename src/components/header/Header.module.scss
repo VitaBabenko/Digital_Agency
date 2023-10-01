@@ -1,3 +1,22 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  background-color: var(--background-color);
+
+  @media screen and (min-width: 475px) {
+    max-width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 100%;
+  }
+  @media screen and (min-width: 1280px) {
+    max-width: 100%;
+  }
+  @media screen and (min-width: 1920px) {
+    max-width: 100%;
+  }
+}
+
 .wrap {
   display: flex;
   background-color: var(--background-color);
@@ -9,6 +28,7 @@
 }
 
 .btn_menu {
+  padding: 0;
   display: block;
   background-color: inherit;
   border: none;
@@ -25,22 +45,28 @@
   }
 }
 
+.icon_burger {
+  fill: var(--primary-color);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+    transition-timing-function: var(--transition_data);
+  }
+}
+
 .btn {
+  padding: 0;
   display: block;
   background-color: inherit;
   border: none;
 }
 
 .icon {
-  background-color: inherit;
-  border: 1px solid var(--primary-color);
-  border-radius: 50px;
-  padding: 5px 8px 3px 8px;
-
+  // display: inline-block;
   @media screen and (min-width: 768px) {
-    border: none;
     display: flex;
-    text-align: center;
+    align-items: center;
     gap: 10px;
     margin-right: 50px;
     margin-left: 120px;
@@ -53,6 +79,22 @@
   @media screen and (min-width: 1440px) {
     margin-left: 750px;
   }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    transition: var(--transition_data);
+  }
+}
+
+.icon_phone {
+  stroke: var(--primary-color);
+
+  &:hover,
+  &:focus {
+    stroke: var(--accent-color);
+    transition: var(--transition_data);
+  }
 }
 
 .btn_phone {
@@ -64,6 +106,12 @@
     color: var(--primary-color);
     font-size: var(--list-font-size);
     font-weight: 600;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    transition: var(--transition_data);
   }
 }
 
@@ -85,5 +133,12 @@
   @media screen and (min-width: 1280px) {
     font-size: var(--btn-font-size);
     margin-right: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    transition: var(--transition_data);
   }
 }

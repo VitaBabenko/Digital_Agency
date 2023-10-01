@@ -11,19 +11,22 @@
   --font-size-word: 60px;
   --title-font-size: 36px;
   --second-title-font-size: 32px;
+  --third-title-font-size: 28px;
   --modal-font-size: 20px;
   --list-font-size: 18px;
   --btn-font-size: 16px;
   --btn_arrow_font-size: 14px;
   --subtitle-font-size: 12px;
+
+  --transition_data: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
   height: 100vh;
   margin: 0;
-  // padding: 0;
+  font-family: "Mulish", sans-serif;
+  // font-family: "Raleway", sans-serif;
   font-style: normal;
-  // background-color: var(--background-color);
 }
 
 a {

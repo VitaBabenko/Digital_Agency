@@ -9,4 +9,10 @@
     var(--btn-color) 100%
   );
   border: none;
+
+  &:hover,
+  &:focus {
+    box-shadow: 2px 2px 2px 2px var(--accent-color);
+    transition-timing-function: var(--transition_data);
+  }
 }
