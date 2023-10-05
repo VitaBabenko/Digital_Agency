@@ -21,32 +21,40 @@
   display: flex;
   background-color: var(--background-color);
   padding: 15px;
+  justify-content: space-between;
 
-  @media screen and (max-width: 767px) {
-    justify-content: space-between;
+  @media screen and (min-width: 1920px) {
+    padding: 45px 30px 0px 60px;
+  }
+}
+
+.wrap_btn {
+  display: flex;
+  align-items: center;
+  gap: 110px;
+
+  @media screen and (min-width: 1920px) {
+    gap: 100px;
   }
 }
 
 .btn_menu {
   padding: 0;
   display: block;
-  background-color: inherit;
+  background-color: transparent;
   border: none;
-  z-index: 999;
-
-  @media screen and (min-width: 768px) {
-    margin-left: 40px;
-    margin-right: 80px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    margin-left: 23px;
-    margin-right: 80px;
-  }
+  z-index: 85;
 }
 
 .icon_burger {
   fill: var(--primary-color);
+  width: 20px;
+  height: 20px;
+
+  @media screen and (min-width: 1920px) {
+    width: 30px;
+    height: 30px;
+  }
 
   &:hover,
   &:focus {
@@ -57,27 +65,39 @@
 
 .btn {
   padding: 0;
-  display: block;
-  background-color: inherit;
+  background-color: transparent;
   border: none;
+  z-index: 85;
+}
+
+.icon_logo {
+  width: 69px;
+  height: 20px;
+  fill: var(--primary-color);
+
+  @media screen and (min-width: 1280px) {
+    width: 85px;
+    height: 36px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    width: 120px;
+    height: 35px;
+  }
+
+  &:hover,
+  &:focus {
+    stroke: var(--accent-color);
+    fill: var(--accent-color);
+    transition: var(--transition_data);
+  }
 }
 
 .icon {
-  // display: inline-block;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1920px) {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-right: 50px;
-    margin-left: 120px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    margin-left: 580px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    margin-left: 750px;
   }
 
   &:hover,
@@ -87,13 +107,39 @@
   }
 }
 
+.wrap_phone {
+  display: flex;
+  gap: 50px;
+}
+
 .icon_phone {
   stroke: var(--primary-color);
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
 
   &:hover,
   &:focus {
     stroke: var(--accent-color);
     transition: var(--transition_data);
+  }
+}
+
+.icon_phone_desktop {
+  @media screen and (max-width: 1279px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1280px) {
+    stroke: var(--primary-color);
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover,
+  &:focus {
+    stroke: var(--accent-color);
   }
 }
 
@@ -116,23 +162,19 @@
 }
 
 .btn_desktop {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1279px) {
     display: none;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1920px) {
     color: var(--primary-color);
-    font-size: var(--btn_arrow_font-size);
+    font-size: var(--btn-font-size);
     font-weight: 600;
     text-transform: capitalize;
-    padding: 5px 20px;
+    padding: 10px 40px;
     background-color: inherit;
     border: 2px solid rgba(255, 255, 255, 0.5);
-  }
-
-  @media screen and (min-width: 1280px) {
-    font-size: var(--btn-font-size);
-    margin-right: 10px;
+    margin-right: 59px;
   }
 
   &:hover,

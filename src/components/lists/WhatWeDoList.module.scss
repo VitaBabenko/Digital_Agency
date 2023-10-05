@@ -1,16 +1,10 @@
-// .icon_wrap {
-//   position: relative;
-// }
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
 
-// .img_icon {
-//   position: absolute;
-//   left: 18%;
-//   top: 10%;
-// }
-
-.title {
-  margin-top: 45px;
-  margin-bottom: 19px;
+.title_wrap {
+  margin-bottom: 10px;
   color: var(--primary-color);
   font-family: "Raleway", sans-serif;
   font-size: var(--list-font-size);
@@ -18,7 +12,7 @@
   text-transform: capitalize;
 }
 
-.description {
+.description_wrap {
   color: var(--secondary-color);
   font-size: var(--btn-font-size);
   font-weight: 400;

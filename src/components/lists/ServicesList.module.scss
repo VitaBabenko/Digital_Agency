@@ -1,0 +1,19 @@
+.title {
+  margin-top: 45px;
+  margin-bottom: 19px;
+  color: var(--primary-color);
+  font-family: "Raleway", sans-serif;
+  font-size: var(--list-font-size);
+  font-weight: 600;
+  text-transform: capitalize;
+
+  @media screen and (min-width: 1920px) {
+    font-size: var(--modal-font-size);
+  }
+}
+
+.description {
+  color: var(--secondary-color);
+  font-size: var(--btn-font-size);
+  font-weight: 400;
+}

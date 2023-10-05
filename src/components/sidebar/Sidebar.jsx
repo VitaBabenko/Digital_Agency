@@ -3,15 +3,23 @@ import styles from "./Sidebar.module.scss";
 const Sidebar = () => {
   return (
     <div className={styles.wrapper}>
-      <a href="*" target="blank" rel="noopener">
-        Fb
-      </a>
-      <a href="*" target="blank" rel="noopener">
-        Tw
-      </a>
-      <a href="*" target="blank" rel="noopener">
-        Ln
-      </a>
+      <ul className={styles.list}>
+        <li className={styles.list_item}>
+          <a href="*" target="blank" rel="noopener" className={styles.social}>
+            Fb
+          </a>
+        </li>
+        <li className={styles.list_item}>
+          <a href="*" target="blank" rel="noopener" className={styles.social}>
+            Tw
+          </a>
+        </li>
+        <li>
+          <a href="*" target="blank" rel="noopener" className={styles.social}>
+            In
+          </a>
+        </li>
+      </ul>
     </div>
   );
 };

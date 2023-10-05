@@ -5,12 +5,7 @@ import styles from "./ServicesList.module.scss";
 const ServicesList = ({ icon, title, desc }) => {
   return (
     <>
-      <svg
-        aria-label="icons services"
-        width={125}
-        height={95}
-        className={styles.icon_wrap}
-      >
+      <svg aria-label="icons services" width={125} height={95}>
         <use href={icon}></use>
       </svg>
       <h3 className={styles.title}>{title}</h3>
@@ -22,7 +17,7 @@ const ServicesList = ({ icon, title, desc }) => {
 ServicesList.propTypes = {
   title: PropTypes.node,
   desc: PropTypes.node,
-  icon: PropTypes.element,
+  icon: PropTypes.string,
 };
 
 export default ServicesList;

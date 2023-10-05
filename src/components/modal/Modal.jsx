@@ -24,35 +24,63 @@ const Modal = ({ setIsOpenModal }) => {
             <use href={icons + "#icon-close"}></use>
           </svg>
         </button>
-        <nav className={styles.list}>
-          <NavLink
-            className={styles.item}
-            to="/about"
-            onClick={() => setIsOpenModal(false)}
-          >
-            About us
-          </NavLink>
-          <NavLink
-            className={styles.item}
-            to="/services"
-            onClick={() => setIsOpenModal(false)}
-          >
-            Services
-          </NavLink>
-          <NavLink
-            className={styles.item}
-            to="/serviceDetail"
-            onClick={() => setIsOpenModal(false)}
-          >
-            Service detail
-          </NavLink>
-          <NavLink
-            className={styles.item}
-            to="/contact"
-            onClick={() => setIsOpenModal(false)}
-          >
-            Contact us
-          </NavLink>
+        <nav>
+          <ul className={styles.list}>
+            <li>
+              <NavLink
+                className={styles.item}
+                to="/about"
+                onClick={() => setIsOpenModal(false)}
+              >
+                About us
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={styles.item}
+                to="/services"
+                onClick={() => setIsOpenModal(false)}
+              >
+                Services
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={styles.item}
+                to="/serviceDetail"
+                onClick={() => setIsOpenModal(false)}
+              >
+                Service detail
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={styles.item}
+                to="/portfolio"
+                onClick={() => setIsOpenModal(false)}
+              >
+                Portfolio
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={styles.item}
+                to="/blog"
+                onClick={() => setIsOpenModal(false)}
+              >
+                Blog
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={styles.item}
+                to="/contact"
+                onClick={() => setIsOpenModal(false)}
+              >
+                Contact us
+              </NavLink>
+            </li>
+          </ul>
         </nav>
         <form>
           <input className={styles.input} type="text" placeholder="Search" />
