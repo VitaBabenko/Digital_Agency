@@ -1,0 +1,88 @@
+.img_blog {
+  @media screen and (min-width: 1920px) {
+    width: 555px;
+  }
+}
+
+.wrap {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.first_desc {
+  display: flex;
+  align-items: center;
+  font-size: var(--btn-font-size);
+  font-weight: 400;
+  color: var(--secondary-color);
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 1px;
+    background-color: var(--primary-color);
+    opacity: 0.2;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.second_desc {
+  display: flex;
+  align-items: center;
+  font-size: var(--btn_arrow_font-size);
+  font-weight: 400;
+  color: var(--secondary-color);
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 1px;
+    background-color: var(--primary-color);
+    opacity: 0.2;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.title {
+  font-family: "Raleway", sans-serif;
+  font-size: var(--modal-font-size);
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--primary-color);
+  margin-bottom: 42px;
+
+  // &::before {
+  //   content: "our blog";
+  //   position: absolute;
+  //   bottom: -400%;
+  //   left: 83%;
+  //   color: var(--primary-color);
+  //   font-family: "Raleway", sans-serif;
+  //   font-size: var(--font-size-word);
+  //   font-weight: 900;
+  //   text-transform: uppercase;
+  //   transform: rotate(-90deg);
+  //   z-index: 500;
+  // }
+
+  // &::after {
+  //   content: "news";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   transform: translate(-50%, -50%);
+  //   color: var(--primary-color);
+  //   opacity: 0.03;
+  //   font-family: "Raleway", sans-serif;
+  //   font-size: var(--font-size-back-word);
+  //   font-weight: 900;
+  //   text-transform: uppercase;
+  //   transform: rotate(-90deg);
+  //   z-index: 500;
+  // }
+}
