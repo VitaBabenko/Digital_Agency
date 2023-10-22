@@ -5,29 +5,40 @@ import styles from "./WhiteBackgroundSection.module.scss";
 const WhiteBackgroundSection = ({ icon, link, img1, img2, img3 }) => {
   return (
     <section className={styles.section}>
-      <div className={styles.desktop_wrap}>
-        <div className={styles.wrap}>
-          <svg aria-label="icon polygon" width={18} height={16}>
-            <use href={icon}></use>
-          </svg>
-          <span className={styles.subtitle}>portfolio</span>
+      <div className={styles.container}>
+        <div className={styles.desktop_wrap}>
+          <div className={styles.wrap}>
+            <svg aria-label="icon polygon" width={18} height={16}>
+              <use href={icon}></use>
+            </svg>
+            <span className={styles.subtitle}>portfolio</span>
+          </div>
+          <div className={styles.desktop_wrap_title}>
+            <h3 className={styles.title_black}>check our latest cases</h3>
+            {link}
+          </div>
         </div>
-        <div className={styles.desktop_wrap_title}>
-          <h3 className={styles.title_black}>check our latest cases</h3>
-          {link}
+        <div className={styles.wrap_desktop}>
+          <ul className={styles.img_list}>
+            <li>
+              <img src={img1} alt="first picture" className={styles.img_item} />
+            </li>
+            <li>
+              <img
+                src={img2}
+                alt="second picture"
+                className={styles.img_item}
+              />
+            </li>
+            <li>
+              <img src={img3} alt="third picture" className={styles.img_item} />
+            </li>
+          </ul>
+          <div className={styles.wrap_word}>
+            <span className={styles.big_word}>cases</span>
+          </div>
         </div>
       </div>
-      <ul className={styles.img_list}>
-        <li>
-          <img src={img1} alt="first picture" className={styles.img_item} />
-        </li>
-        <li>
-          <img src={img2} alt="second picture" className={styles.img_item} />
-        </li>
-        <li>
-          <img src={img3} alt="third picture" className={styles.img_item} />
-        </li>
-      </ul>
     </section>
   );
 };

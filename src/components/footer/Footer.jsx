@@ -6,8 +6,8 @@ import styles from "./Footer.module.scss";
 
 const Footer = () => {
   return (
-    <div className={styles.container}>
-      <section className={styles.footer}>
+    <footer className={styles.footer}>
+      <section className={styles.container}>
         <div className={styles.after_line}>
           <div className={styles.footer_links}>
             <svg
@@ -74,7 +74,7 @@ const Footer = () => {
               </div>
             </li>
           </ul>
-          <div>
+          <div className={styles.wrap_footer}>
             <ul className={styles.social_list}>
               <li className={styles.item}>
                 <a
@@ -113,7 +113,7 @@ const Footer = () => {
           </div>
         </div>
       </section>
-    </div>
+    </footer>
   );
 };
 
