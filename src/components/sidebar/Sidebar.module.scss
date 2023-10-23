@@ -1,17 +1,19 @@
 .wrapper {
-  @media screen and (max-width: 1199px) {
-    display: none;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  z-index: 70;
+  width: 70px;
+  height: 100vh;
+  background-color: var(--sidebar-background-color);
+
+  @media screen and (min-width: 1024px) {
+    width: 80px;
   }
 
-  @media screen and (min-width: 1920px) {
-    position: fixed;
-    top: 0;
-    display: flex;
-    align-items: center;
-    z-index: 70;
+  @media screen and (min-width: 1200px) {
     width: 138px;
-    height: 100vh;
-    background-color: var(--sidebar-background-color);
   }
 }
 
@@ -38,9 +40,13 @@
 
 .social {
   color: var(--primary-color);
-  font-size: var(--list-font-size);
+  font-size: var(--btn_arrow_font-size);
   font-weight: 700;
   opacity: 0.5;
+
+  @media screen and (min-width: 1200px) {
+    font-size: var(--list-font-size);
+  }
 
   &:hover,
   &:focus {

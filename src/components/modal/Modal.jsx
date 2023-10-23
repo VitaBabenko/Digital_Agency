@@ -82,17 +82,6 @@ const Modal = ({ setIsOpenModal }) => {
             </li>
           </ul>
         </nav>
-        <form>
-          <input className={styles.input} type="text" placeholder="Search" />
-          <svg
-            aria-label="icon search"
-            width={20}
-            height={20}
-            className={styles.img_icon}
-          >
-            <use href={icons + "#search"}></use>
-          </svg>
-        </form>
       </div>
     </div>
   );

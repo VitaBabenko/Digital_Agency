@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 import HomePage from "./pages/HomePage";
 import AboutUsPage from "./pages/AboutUsPage";
@@ -14,10 +15,25 @@ import Layout from "./components/layout/Layout";
 import "./App.scss";
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1023);
+    };
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
+      <Route path="/" element={<Layout isMobile={isMobile} />}>
+        <Route index element={<HomePage isMobile={isMobile} />} />
         <Route path="about" element={<AboutUsPage />} />
         <Route path="services" element={<ServicesPage />} />
         <Route path="serviceDetail" element={<ServicesDetailPage />} />
